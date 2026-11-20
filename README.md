@@ -22,7 +22,7 @@ That's it. The first run sets everything up for you:
 
 - installs the website's packages,
 - creates `backend/.env` from `backend/.env.example`,
-- creates a local database with a starter admin account and two sample animals,
+- creates a local database with a starter admin account and sample animals (two of them Available, so the Adopt page has pets),
 
 then starts both servers:
 

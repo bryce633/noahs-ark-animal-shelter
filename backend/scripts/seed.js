@@ -101,7 +101,35 @@ function seedSampleData() {
     "UPDATE animals SET status = 'PENDING' WHERE id = ?"
   ).run(colby.lastInsertRowid);
 
-  console.log('[seed] Created sample animals (Colby, Luna), an intake and medical history, a person, and a pending application.');
+  // Available animals, so the website's Adopt and Home pages have pets to show.
+  insertAnimal.run(
+    'Daisy',
+    'DOG',
+    'Lab mix',
+    'FEMALE',
+    '2022-06-01',
+    1,
+    'Yellow',
+    'AVAILABLE',
+    'Calm, sweet, and house-trained. Would love a big yard.',
+    '2026-09-20'
+  );
+  insertAnimal.run(
+    'Milo',
+    'CAT',
+    'Domestic Shorthair',
+    'MALE',
+    '2026-03-01',
+    1,
+    'Orange tabby',
+    'AVAILABLE',
+    'Playful kitten full of energy. Loves toys and climbing.',
+    '2026-10-05'
+  );
+
+  console.log(
+    '[seed] Created sample animals (Colby, Luna, Daisy, Milo), an intake and medical history, a person, and a pending application.'
+  );
 }
 
 seedAdminUser();

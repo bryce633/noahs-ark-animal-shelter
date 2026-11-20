@@ -38,7 +38,7 @@ The SQLite database file is created automatically at `data/shelter.sqlite`
 The seed script creates an admin account using `ADMIN_USERNAME` /
 `ADMIN_PASSWORD` from your `.env` (defaults to `admin` / `change-me-now`
 if you don't set them — **change this before using it for anything
-real**). It also adds two sample animals (including one named Colby) so
+real**). It also adds sample animals (Colby, Luna, and two Available pets) so
 there's something to look at right away. It's safe to re-run; it skips
 anything that already exists.
 
