@@ -1,0 +1,201 @@
+.header {
+  background: var(--cream);
+  border-bottom: 2px solid #000000;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav {
+  padding: 6px max(32px, 7vw) 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Logo artwork with the "Noah's Ark Animal Shelter" text beside it. The text
+   shrinks first when the menu needs the room. */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.brandIcon {
+  flex-shrink: 0;
+  height: 110px;
+  width: auto;
+}
+
+.brandText {
+  flex: 0 1 260px;
+  min-width: 0;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-left: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.link {
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.donate {
+  display: inline-block;
+  background: var(--brown);
+  color: var(--white);
+  font-size: 24px;
+  padding: 10px 24px;
+  text-decoration: none;
+}
+
+.donate:hover {
+  opacity: 0.9;
+}
+
+.donateActive {
+  font-weight: 700;
+  outline: 2px solid #000000;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  color: var(--navy);
+  font-size: 26px;
+  line-height: 1;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@media (max-width: 1280px) {
+  .link {
+    font-size: 24px;
+  }
+
+  .links {
+    gap: 24px;
+  }
+
+  .donate {
+    font-size: 20px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .brandIcon {
+    height: 90px;
+  }
+
+  .link {
+    font-size: 20px;
+  }
+
+  .links {
+    gap: 18px;
+  }
+}
+
+/* Tablet width: not enough room for the text next to a full menu. */
+@media (max-width: 960px) and (min-width: 761px) {
+  .brandText {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    padding: 6px 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brandIcon {
+    height: 64px;
+  }
+
+  .brandText {
+    flex-basis: 170px;
+    width: 170px;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    margin-left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-bottom: 16px;
+  }
+
+  .linksOpen {
+    display: flex;
+  }
+
+  .link {
+    display: block;
+    padding: 8px 0;
+    font-size: 22px;
+  }
+
+  .donate {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brandIcon {
+    height: 56px;
+  }
+
+  .brandText {
+    flex-basis: 140px;
+    width: 140px;
+  }
+}

@@ -1,0 +1,19 @@
+# Packages and build output
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local settings and secrets (copy the .env.example files instead)
+.env
+.env*.local
+
+# Local database (each developer gets their own from `npm run dev`)
+backend/data/*.sqlite
+backend/data/*.sqlite-journal
+
+# Misc
+*.log
+.DS_Store
+.claude/settings.local.json

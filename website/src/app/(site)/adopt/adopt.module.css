@@ -1,0 +1,180 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  min-width: 180px;
+  padding: 12px 20px;
+  font: inherit;
+  font-size: 22px;
+  color: var(--navy);
+  background: var(--white);
+  border: 2px solid var(--navy);
+  cursor: pointer;
+}
+
+.tabActive {
+  background: var(--navy);
+  color: var(--white);
+  font-weight: 700;
+  border-color: #000000;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-size: 17px;
+}
+
+.stepNumber {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepTitle {
+  font-size: 22px;
+}
+
+@media (max-width: 760px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab {
+    min-width: 0;
+    flex: 1;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Adoption agreement ---------- */
+
+.agreementHeader {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--line);
+}
+
+.agreement {
+  background: #faf8f3;
+  border-left: 4px solid var(--brown);
+  border-radius: 6px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+}
+
+.agreementTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.letterList {
+  list-style: upper-alpha;
+  margin: 0;
+  padding-left: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.agreeCheck {
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.radioRow {
+  display: flex;
+  gap: 28px;
+  font-weight: 400;
+  padding-top: 6px;
+}
+
+.radioColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hint {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.signature {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: 28px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.shelterUse {
+  border: 2px dashed var(--line);
+  border-radius: 8px;
+  padding: 18px 22px;
+  background: #f6f5f1;
+}
+
+.shelterUseTitle {
+  font-weight: 700;
+}
+
+.shelterLines {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 26px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.shelterLines span {
+  border-top: 1.5px solid var(--muted);
+  padding-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .agreement {
+    padding: 14px 16px;
+  }
+
+  .shelterLines {
+    grid-template-columns: 1fr 1fr;
+  }
+}

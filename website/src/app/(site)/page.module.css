@@ -1,0 +1,140 @@
+/* Wider than the usual 1040px container so the content fills the row. */
+.split:global(.container),
+.wide:global(.container) {
+  max-width: 1280px;
+}
+
+.wide :global(.sectionTitle) {
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+
+.wide :global(.lead) {
+  font-size: 23px;
+  max-width: 880px;
+  margin-bottom: 40px;
+}
+
+.wide :global(.center .btn) {
+  font-size: 21px;
+  padding: 14px 40px;
+}
+
+.bigGrid:global(.grid3) {
+  gap: 36px;
+}
+
+/* Pet cards stay centered when there are only one or two available pets. */
+.petGrid:global(.grid3) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.petGrid > * {
+  flex: 0 1 calc((100% - 72px) / 3);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.split :global(.sectionTitle) {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.reverse {
+  grid-template-columns: 1fr 440px;
+}
+
+.reverse .photo {
+  order: 2;
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.photo img {
+  object-fit: cover;
+}
+
+.body {
+  font-size: 24px;
+  line-height: 1.6;
+  text-indent: 1.5em;
+}
+
+@media (max-width: 1100px) {
+  .split {
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
+  }
+
+  .reverse {
+    grid-template-columns: 1fr 360px;
+  }
+
+  .body {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 760px) {
+  .split :global(.sectionTitle),
+  .wide :global(.sectionTitle) {
+    font-size: 30px;
+  }
+
+  .bigGrid:global(.grid3) {
+    gap: 20px;
+  }
+
+  .petGrid > * {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .wide :global(.lead) {
+    font-size: 19px;
+    margin-bottom: 28px;
+  }
+
+  .split,
+  .reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse .photo {
+    order: 0;
+  }
+
+  .photo {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .body {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 761px) {
+  .petGrid > * {
+    flex-basis: calc((100% - 36px) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .petGrid > * {
+    flex-basis: 100%;
+  }
+}

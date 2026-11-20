@@ -1,0 +1,315 @@
+:root {
+  --cream: #fbfaf6;
+  --brown: #b37243;
+  --navy: #295683;
+  --footer: #a37859;
+  --footer-dark: #78543a;
+  --gray: #d9d9d9;
+  --text: #111111;
+  --muted: #6e6e6e;
+  --line: #c8c3b9;
+  --track: #e6e2da;
+  --green: #4c8c4a;
+  --white: #ffffff;
+  --light-btn: #f3f3f3;
+  --light-btn-stroke: #72c0e3;
+
+  --radius: 12px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  --max-width: 1040px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.sectionGray {
+  background: var(--gray);
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 16px;
+}
+
+.lead {
+  text-align: center;
+  font-size: 20px;
+  max-width: 760px;
+  margin: 0 auto 32px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btnBrown {
+  background: var(--brown);
+  color: var(--white);
+}
+
+.btnNavy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btnWhite {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.btnOutline {
+  background: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+.btnLight {
+  background: var(--light-btn);
+  color: var(--text);
+  border: 3px solid var(--light-btn-stroke);
+  border-radius: 0;
+  font-weight: 600;
+}
+
+/* ---------- Cards ---------- */
+
+.whiteCard {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--brown);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.badgeGreen {
+  background: var(--green);
+}
+
+/* ---------- Forms ---------- */
+
+.formCard {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.formHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.input {
+  font: inherit;
+  font-weight: 400;
+  padding: 14px 16px;
+  border: 1.5px solid #aaaaaa;
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.input:focus {
+  outline: 3px solid var(--light-btn-stroke);
+  border-color: var(--navy);
+}
+
+textarea.input {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.checkGroupLabel {
+  font-weight: 600;
+}
+
+.checkGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 20px;
+}
+
+.checkGrid4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.check input {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--navy);
+}
+
+.formNote {
+  font-size: 15px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .checkGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 17px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .grid3,
+  .grid4,
+  .fieldRow,
+  .checkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 24px 18px;
+  }
+}

@@ -1,0 +1,219 @@
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 24px;
+  flex-wrap: wrap;
+}
+
+.raisedText {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.goalText {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ---------- Donation box ---------- */
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.toggle {
+  display: flex;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggleButton {
+  font: inherit;
+  font-weight: 700;
+  padding: 12px 40px;
+  border: none;
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.toggleActive {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.amounts {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.amount {
+  font: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 14px 0;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.amountActive {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.giveButton {
+  font-size: 24px;
+  padding: 16px 48px;
+}
+
+.fineprint {
+  font-size: 15px;
+  color: var(--muted);
+  text-align: center;
+  max-width: 720px;
+}
+
+/* ---------- Sponsor tiers ---------- */
+
+.tier {
+  background: var(--white);
+  border: 3px solid var(--brown);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.tier :global(.badge) {
+  align-self: center;
+}
+
+.tierPrice {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.wallTitle {
+  text-align: center;
+  font-size: 24px;
+  margin: 40px 0 16px;
+}
+
+.wall {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.wallSlot {
+  height: 80px;
+  border: 2px dashed #aaaaaa;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--muted);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ---------- Other ways ---------- */
+
+.other {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.otherText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.otherText :global(.sectionTitle) {
+  text-align: left;
+}
+
+.otherHeading {
+  font-size: 22px;
+  color: var(--navy);
+  margin-top: 8px;
+}
+
+.qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+}
+
+.qrPlaceholder {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #000000;
+  background: var(--track);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+.qrLabel {
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .amounts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .other {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .qr {
+    align-self: center;
+  }
+
+  .giveButton {
+    font-size: 20px;
+    padding: 14px 24px;
+  }
+
+  .toggleButton {
+    padding: 12px 24px;
+  }
+}

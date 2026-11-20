@@ -1,0 +1,114 @@
+.mapInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.map {
+  width: 100%;
+  min-height: 440px;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoTitle {
+  font-size: 28px;
+  color: var(--navy);
+}
+
+.infoRow {
+  display: flex;
+  gap: 14px;
+  font-size: 24px;
+}
+
+.infoLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.infoValue {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+a.infoValue:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.hoursTips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.hoursTips :global(.whiteCard) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardTitle {
+  font-size: 26px;
+  color: var(--navy);
+}
+
+.hours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1.5px solid var(--line);
+}
+
+.hoursDay {
+  font-weight: 600;
+}
+
+.small {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.tips {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+}
+
+@media (max-width: 760px) {
+  .mapInfo,
+  .hoursTips {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .map {
+    min-height: 300px;
+  }
+}

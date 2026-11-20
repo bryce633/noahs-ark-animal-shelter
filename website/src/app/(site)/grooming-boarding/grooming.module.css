@@ -1,0 +1,134 @@
+.service {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.reverse {
+  grid-template-columns: 1fr 380px;
+}
+
+.reverse .photo {
+  order: 2;
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 380 / 440;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.photo img {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title {
+  font-size: 36px;
+  color: var(--navy);
+}
+
+.priceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1.5px solid var(--line);
+}
+
+.serviceName {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.serviceDescription {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brown);
+  white-space: nowrap;
+}
+
+.note {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.requirements ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.reqTitle {
+  font-size: 24px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.reqLabel {
+  font-weight: 600;
+}
+
+.book {
+  background: var(--footer);
+  color: var(--white);
+  text-align: center;
+  padding: 48px 0;
+}
+
+.book :global(.container) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.bookTitle {
+  font-size: 34px;
+}
+
+@media (max-width: 760px) {
+  .service,
+  .reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .reverse .photo {
+    order: 0;
+  }
+
+  .photo {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .requirements {
+    grid-template-columns: 1fr;
+  }
+}

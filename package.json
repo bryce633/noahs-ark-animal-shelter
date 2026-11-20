@@ -1,0 +1,16 @@
+{
+  "name": "noahs-ark-animal-shelter",
+  "version": "1.0.0",
+  "description": "Website and backend for Noah's Ark Animal Shelter in Colby, Kansas.",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "predev": "node scripts/setup.mjs",
+    "dev": "node scripts/dev.mjs",
+    "setup": "node scripts/setup.mjs",
+    "test": "npm --prefix backend test",
+    "build": "npm --prefix website run build"
+  }
+}

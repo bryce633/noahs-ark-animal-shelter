@@ -1,0 +1,273 @@
+/* ---------- Pet card ---------- */
+
+.petCard {
+  background: var(--brown);
+  color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.petPhoto {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.petPhoto img {
+  object-fit: cover;
+}
+
+.petName {
+  font-size: 26px;
+  margin-top: 4px;
+}
+
+.petDetails {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.petDescription {
+  font-size: 17px;
+  flex-grow: 1;
+}
+
+.cardButton {
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* Bigger version used on the home page's Pets up for adoption section. */
+.petLarge {
+  padding: 20px;
+  gap: 10px;
+}
+
+.petLarge .petName {
+  font-size: 32px;
+}
+
+.petLarge .petDetails,
+.petLarge .petDescription {
+  font-size: 19px;
+}
+
+.petLarge .cardButton {
+  font-size: 20px;
+  padding: 14px 28px;
+}
+
+@media (max-width: 600px) {
+  .petLarge .petName {
+    font-size: 26px;
+  }
+
+  .petLarge .petDetails,
+  .petLarge .petDescription {
+    font-size: 17px;
+  }
+}
+
+/* ---------- Info card (help, impact, includes) ---------- */
+
+.infoCard {
+  background: var(--brown);
+  color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 17px;
+}
+
+.infoIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.infoTitle {
+  font-size: 24px;
+}
+
+/* Bigger version used on the home page's How You Can Help section. */
+.infoLarge {
+  padding: 32px 28px;
+  gap: 14px;
+  font-size: 21px;
+}
+
+.infoLarge .infoIcon {
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+}
+
+.infoLarge .infoTitle {
+  font-size: 32px;
+}
+
+@media (max-width: 600px) {
+  .infoLarge {
+    padding: 24px 20px;
+    font-size: 18px;
+  }
+
+  .infoLarge .infoIcon {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+  }
+
+  .infoLarge .infoTitle {
+    font-size: 26px;
+  }
+}
+
+/* ---------- Progress bar ---------- */
+
+.track {
+  height: 14px;
+  background: var(--track);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--brown);
+  border-radius: 7px;
+}
+
+/* ---------- White photo cards (campaigns, stories) ---------- */
+
+.whitePhotoCard {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wideImage {
+  position: relative;
+  aspect-ratio: 5 / 3;
+}
+
+.storyImage {
+  position: relative;
+  aspect-ratio: 300 / 260;
+}
+
+.wideImage img,
+.storyImage img {
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  font-size: 17px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  color: var(--navy);
+}
+
+.raised {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+.storyHome {
+  color: var(--brown);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.quote {
+  font-style: italic;
+}
+
+/* ---------- Event row ---------- */
+
+.eventRow {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.date {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.month {
+  font-size: 18px;
+}
+
+.day {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.eventInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 17px;
+}
+
+.eventTitle {
+  font-size: 24px;
+}
+
+.eventWhen {
+  color: var(--brown);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .eventRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date {
+    width: 80px;
+    height: 80px;
+  }
+}

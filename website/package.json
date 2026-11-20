@@ -1,0 +1,22 @@
+{
+  "name": "noahs-ark-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "node -e \"require('fs').existsSync('node_modules/next') || require('child_process').execSync('npm install', { stdio: 'inherit' })\"",
+    "dev": "next dev --turbopack --port 3123",
+    "build": "next build",
+    "start": "next start --port 3123"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.11",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "^5"
+  }
+}
